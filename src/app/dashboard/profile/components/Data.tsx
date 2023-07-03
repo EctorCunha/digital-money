@@ -32,7 +32,7 @@ export const Data = (props: DataProps) => {
       cpf: String(props.dni).replace(/(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4"),
       name: props.firstName + " " + props.lastName,
       phone: props.phone,
-      passwordPlaneholder: "123456",
+      passwordPlaneholder: process.env.NEXT_SECRET_PLACEHOLDER,
     },
   });
 
