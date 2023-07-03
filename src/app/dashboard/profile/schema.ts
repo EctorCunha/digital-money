@@ -11,7 +11,7 @@ export const FormProfileForm = z.object({
     .string()
     .nonempty({ message: "Campo obrigatório" })
     .regex(/^\d{10,11}$/, { message: "Número de telefone inválido" }),
-  password: z
+    passwordPlaneholder: z
     .string()
     .nonempty({ message: "Campo obrigatório" })
     .min(6, { message: "A senha deve ter pelo menos 6 caracteres" })

@@ -17,7 +17,7 @@ type InputCurrencyControllerProps = CurrencyInputProps & {
 export const InputCurrencyController = (
   props: InputCurrencyControllerProps
 ) => {
-  const { control, name, label, defaultValue, error, inputProps, ...rest } =
+  const { control, name, label, defaultValue, error } =
     props;
 
   return (

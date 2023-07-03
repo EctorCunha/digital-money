@@ -19,7 +19,7 @@ interface RadioControllerProps extends RadioGroupProps {
   control?: Control<any>;
   defaultValue?: any;
   children: React.ReactNode;
-  rules?:
+  rules:
     | Omit<
         RegisterOptions<any, string>,
         "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"

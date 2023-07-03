@@ -30,8 +30,10 @@ export const Success = ({ data }: { data: ServiceDetail }) => {
     );
     doc.text(`Destinatário: ${data?.name}`, 10, 50);
     doc.text(`Número da operação: ${data?.id}`, 10, 60);
-
-    doc.save(`${`${session?.user?.user_data.firstname} ${session?.user?.user_data.lastname}`} ${data?.name}`);
+    
+    const sessionFirstName = session?.user?.user_data.firstname
+    const sessionLastName = session?.user?.user_data.lastname
+    doc.save(`${sessionFirstName} ${sessionLastName} ${data?.name}`);
   };
 
   return (

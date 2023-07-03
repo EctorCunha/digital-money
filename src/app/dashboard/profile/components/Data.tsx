@@ -32,7 +32,7 @@ export const Data = (props: DataProps) => {
       cpf: String(props.dni).replace(/(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4"),
       name: props.firstName + " " + props.lastName,
       phone: props.phone,
-      password: "123456",
+      passwordPlaneholder: "123456",
     },
   });
 
@@ -44,7 +44,7 @@ export const Data = (props: DataProps) => {
         email: userData.email,
         firstName: userData.name.split(" ")[0] ?? "",
         lastName: userData.name.split(" ")[1] ?? "",
-        password: userData.password,
+        password: userData.passwordPlaneholder,
         phone: userData.phone,
       });
       toast({
@@ -204,7 +204,7 @@ export const Data = (props: DataProps) => {
                 name="password"
                 type={show ? "text" : "password"}
                 control={control}
-                error={errors.password}
+                error={errors.passwordPlaneholder}
                 variant="flushed"
                 isDisabled={!isEditingPassword}
               />

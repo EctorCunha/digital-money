@@ -1,6 +1,5 @@
 "use client";
 import { Divider, Flex, Text } from "@chakra-ui/react";
-import { useRouter } from "next/navigation";
 import { ServiceInfo } from "../ServiceInfo";
 import { Service } from "@/query/use-get-services";
 
@@ -9,7 +8,6 @@ interface ServicesProps {
 }
 
 export const Services = ({ services }: ServicesProps) => {
-  const router = useRouter();
 
   return (
     <Flex

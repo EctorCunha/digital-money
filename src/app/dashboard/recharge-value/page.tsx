@@ -14,7 +14,7 @@ import { Step5 } from "./Step/Step5";
 import { useEffect } from "react";
 import RechargeValueLink from "./components/RechargeValueLink";
 
-export default function RechargeValue({}) {
+export default function RechargeValue() {
   const { step, setStep } = useStep();
 
   const methods = useForm<TypeFormRechargeForm>({

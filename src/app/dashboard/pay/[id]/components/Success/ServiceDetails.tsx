@@ -1,7 +1,6 @@
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { Card } from "@/query/use-get-cards";
 import { ServiceDetail } from "@/query/use-get-service-by-id";
 
 interface ServiceDetailsProps {

@@ -3,7 +3,6 @@ import FieldInput from "@/components/FieldInput";
 import { Template } from "@/components/Template";
 import { TemplateGrid } from "@/components/Template/TemplateGrid";
 import {
-  Flex,
   HStack,
   InputGroup,
   InputLeftElement,

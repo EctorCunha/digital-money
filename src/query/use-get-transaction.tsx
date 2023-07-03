@@ -1,4 +1,4 @@
-import { api, getApi } from "@/libs/axios";
+import { getApi } from "@/libs/axios";
 import { useQuery } from "react-query";
 
 export interface Transaction {

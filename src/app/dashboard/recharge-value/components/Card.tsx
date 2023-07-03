@@ -6,7 +6,7 @@ interface CardProps extends StackProps {
   card: Card;
 }
 
-const Card: FC<CardProps> = (props: CardProps) => {
+const Card = (props: CardProps) => {
   const { card } = props;
 
   return (

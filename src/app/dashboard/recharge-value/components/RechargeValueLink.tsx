@@ -1,6 +1,5 @@
 import { useStep } from "@/contexts/steps";
-import { HStack } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
+import { HStack, Text } from "@chakra-ui/react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const RechargeValueLink = () => {

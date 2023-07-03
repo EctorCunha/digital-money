@@ -6,8 +6,7 @@ import { useStepPayService } from "@/contexts/step_pay_service";
 import { useGetAccount } from "@/query/use-get-account";
 import { useGetCards } from "@/query/use-get-cards";
 import {
-  ServiceDetail,
-  useGetServiceById,
+  ServiceDetail
 } from "@/query/use-get-service-by-id";
 import { Divider, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";

@@ -5,7 +5,9 @@ import React, { useMemo } from "react";
 import { Link } from "@chakra-ui/next-js";
 import { signOut } from "next-auth/react";
 
-interface SideBarProps {}
+interface SideBarProps {
+  key: string
+}
 
 interface Options {
   label: string;

@@ -1,4 +1,4 @@
-import { getMonth, getYear, monthsInYear } from "date-fns";
+import { getMonth, getYear } from "date-fns";
 import * as z from "zod";
 
 export const cardSchema = z.object({
@@ -75,7 +75,7 @@ export const cardSchema = z.object({
         });
       }
     })
-    .transform((value) => value && value.replaceAll("_", "")),
+    .transform((value) => value?.replaceAll("_", "")),
   first_last_name: z
     .string()
     .nonempty("Campo obrigatário")
@@ -97,7 +97,3 @@ export const cardSchema = z.object({
 });
 
 export type cardInferSchemaType = z.infer<typeof cardSchema>;
-// "cod": 0,
-// "expiration_date": "08/2025",
-// "first_last_name": "string",
-// "number_id": 0

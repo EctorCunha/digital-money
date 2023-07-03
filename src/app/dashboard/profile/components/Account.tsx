@@ -1,8 +1,7 @@
 "use client";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useToast } from "@chakra-ui/react";
 import { MdContentCopy } from "react-icons/md";
 import { useSession } from "next-auth/react";
-import { useToast } from "@chakra-ui/react";
 
 interface AccountProps {
   cvu: string;
