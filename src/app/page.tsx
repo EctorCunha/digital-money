@@ -9,13 +9,13 @@ export default function Home() {
         position={"relative"}
         w="100%"
         flexDir={"column"}
-        justifyContent={"end"}
+        justifyContent={"space-around"}
         alignItems={"center"}
         paddingBottom={"10px"}
         h="calc(100vh - 128px)"
       >
         <Box
-          height={{ base: "210px", md: "180px", lg: "400px" }}
+          height={{ base: "145px", md: "170px", lg: "400px" }}
           alignItems="left"
           width={{ base: "354px", md: "90%", lg: "90%" }}
           marginBottom={"5rem"}
@@ -30,10 +30,7 @@ export default function Home() {
           >
             De agora em diante, faça mais com seu dinheiro
           </Text>
-          <Box
-            display={"flex"}
-            flexDir={{ base: "column", md: "row", lg: "row" }}
-          >
+          <Box display={"flex"} flexDir={{ base: "column", md: "row", lg: "row" }}>
             <Text
               fontWeight="400"
               fontSize={{ base: "21.5px", md: "34px", lg: "34px" }}
@@ -54,13 +51,10 @@ export default function Home() {
           </Box>
         </Box>
 
-        <Box
-          display={"flex"}
-          flexDir={{ base: "column", md: "column", lg: "row" }}
-        >
+        <Box display={"flex"} flexDir={{ base: "column", md: "column", lg: "row" }}>
           <Box
             borderRadius="25px"
-            height={{ base: "190px", md: "224px", lg: "246px" }}
+            height={{ base: "170px", md: "224px", lg: "246px" }}
             alignItems="baseline"
             borderWidth="1px"
             width={{ base: "354px", md: "597px", lg: "500px" }}
@@ -73,7 +67,7 @@ export default function Home() {
               fontWeight="700"
               fontSize={{ base: "24px", md: "36px", lg: "36px" }}
               lineHeight={{ base: "18px", md: "36px", lg: "49px" }}
-              py={"1rem"}
+              py={"0.5rem"}
               borderBottom={"2px solid #C1FD35"}
             >
               Transferência
@@ -84,14 +78,13 @@ export default function Home() {
               lineHeight={{ base: "20.43px", md: "27.24px", lg: "27.24px" }}
               py={"1rem"}
             >
-              Com a Digital Money House você pode transferir dinheiro para
-              outras contas, bem como receber transferências e centralizar seus
+              Com a Digital Money House você pode transferir dinheiro para outras contas, bem como receber transferências e centralizar seus
               investimentos na nossa carteira virtual.
             </Text>
           </Box>
           <Box
             borderRadius="25px"
-            height={{ base: "190px", md: "224px", lg: "246px" }}
+            height={{ base: "150px", md: "224px", lg: "246px" }}
             alignItems="baseline"
             borderWidth="1px"
             width={{ base: "354px", md: "597px", lg: "500px" }}
@@ -103,7 +96,7 @@ export default function Home() {
               fontWeight="700"
               fontSize={{ base: "24px", md: "36px", lg: "36px" }}
               lineHeight={{ base: "18px", md: "36px", lg: "49px" }}
-              py={"1rem"}
+              py={"0.5rem"}
               borderBottom={"2px solid #C1FD35"}
             >
               Pagamento de serviços
@@ -114,8 +107,7 @@ export default function Home() {
               lineHeight={{ base: "20.43px", md: "27.24px", lg: "27.24px" }}
               py={"1rem"}
             >
-              Pague mensalmente por serviços com apenas 3 clicks. Fácil, rápido
-              e conveniente. Esqueça os boletos em papel.
+              Pague mensalmente por serviços com apenas 3 clicks. Fácil, rápido e conveniente. Esqueça os boletos em papel.
             </Text>
           </Box>
         </Box>
@@ -131,11 +123,12 @@ export default function Home() {
         ></Box>
         <Image
           alt="Mulher olhando o celular na mão"
-          src="/Home.svg"
+          src="/Home.webp"
           position={"absolute"}
           zIndex={"-2"}
           width="100%"
-          height="764"
+          height="100%"
+          overflow={"hidden"}
           objectFit={"cover"}
           top={"-35px"}
         />

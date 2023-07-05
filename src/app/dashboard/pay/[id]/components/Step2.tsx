@@ -13,6 +13,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import { Link } from "@chakra-ui/next-js";
 
 interface Step2Props {
   data: ServiceDetail;
@@ -99,6 +100,18 @@ export default function Step2({ data }: Step2Props) {
             </RadioGroupController>
           );
         })}
+
+        {cards?.length === 0 && (
+          <Text>
+            Nenhum cartão cadastrado. Favor,{" "}
+            <Link
+              href={"dashboard/cards/create-card"}
+              textDecoration={"underline"}
+            >
+              clique aqui para criar um.
+            </Link>
+          </Text>
+        )}
       </VStack>
 
       {errors.card?.message && (

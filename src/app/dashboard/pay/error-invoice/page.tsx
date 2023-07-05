@@ -3,12 +3,12 @@ import { DefaultButton } from "@/components/Button";
 import { Divider, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 import { TemplateGrid } from "@/components/Template/TemplateGrid";
 import { Template } from "@/components/Template";
-import iconX from "public/icon-x.svg"
+import iconX from "public/icon-x.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function ErrorInvoice() {
- const {push} = useRouter()
+  const { push } = useRouter();
 
   return (
     <Template shouldShowUser variant="secondary">
@@ -42,7 +42,13 @@ export default function ErrorInvoice() {
                   justify={"space-between"}
                   gap={"20px"}
                 >
-                  <Flex gap="30px" align={"center"} justify={"center"} direction={"column"} width={"100%"}>
+                  <Flex
+                    gap="30px"
+                    align={"center"}
+                    justify={"center"}
+                    direction={"column"}
+                    width={"100%"}
+                  >
                     <Image src={iconX} alt="icone de erro" />
                     <Text
                       color={"#FFFFFF"}
@@ -51,21 +57,26 @@ export default function ErrorInvoice() {
                       lineHeight="32px"
                     >
                       Não encontramos faturas associadas a esses dados
-
                     </Text>
                   </Flex>
                 </Stack>
 
                 <Divider borderBottomColor="#cecece" />
 
-                <VStack spacing={"8px"} align={"center"} justify={"center"} width={"100%"}>
+                <VStack
+                  spacing={"8px"}
+                  align={"center"}
+                  justify={"center"}
+                  width={"100%"}
+                >
                   <Text
                     color={"#CECECE"}
                     fontWeight="400"
                     fontSize="20px"
                     lineHeight="20px"
                   >
-                    Revise os dados adicionados. Se estão corretos, é possível que a empresa ainda não carregou a sua fatura.
+                    Revise os dados adicionados. Se estão corretos, é possível
+                    que a empresa ainda não tenha carregado a sua fatura.{" "}
                   </Text>
                 </VStack>
               </VStack>

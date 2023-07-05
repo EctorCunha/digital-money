@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, Text, FormControl, InputGroup, InputRightElement, InputLeftElement, useToast } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  FormControl,
+  InputGroup,
+  InputRightElement,
+  InputLeftElement,
+  useToast,
+} from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { HiPencil, HiCheck } from "react-icons/hi";
 import { FormProfileForm, TypeFormProfileForm } from "../schema";
@@ -29,10 +37,13 @@ export const Data = (props: DataProps) => {
     resolver: zodResolver(FormProfileForm),
     defaultValues: {
       email: props.email,
-      cpf: String(props.dni).replace(/(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4"),
+      cpf: String(props.dni).replace(
+        /(\d{3})(\d{3})(\d{3})(\d{2})$/,
+        "$1.$2.$3-$4"
+      ),
       name: props.firstName + " " + props.lastName,
       phone: props.phone,
-      passwordPlaneholder: process.env.NEXT_SECRET_PLACEHOLDER,
+      passwordPlaneholder: "123456",
     },
   });
 
@@ -84,7 +95,12 @@ export const Data = (props: DataProps) => {
       boxShadow={"0px 4px 4px rgba(0, 0, 0, 0.25)"}
       borderRadius={"10px"}
     >
-      <Text fontWeight="700" fontSize={"20px"} lineHeight={"23px"} marginBlockEnd="1em">
+      <Text
+        fontWeight="700"
+        fontSize={"20px"}
+        lineHeight={"23px"}
+        marginBlockEnd="1em"
+      >
         Seus dados
       </Text>
       <Box display={"flex"} flexDir={"column"}>
@@ -92,7 +108,11 @@ export const Data = (props: DataProps) => {
           <Text w="7ch" fontWeight={"medium"}>
             Email
           </Text>
-          <FormControl display={{ base: "", md: "flex", lg: "flex" }} alignItems={"center"} whiteSpace={"nowrap"}>
+          <FormControl
+            display={{ base: "", md: "flex", lg: "flex" }}
+            alignItems={"center"}
+            whiteSpace={"nowrap"}
+          >
             <FieldInputController
               height={"40px"}
               paddingLeft="0.5em"
@@ -112,7 +132,10 @@ export const Data = (props: DataProps) => {
           <Text w="7ch" fontWeight={"medium"}>
             CPF
           </Text>
-          <FormControl display={{ base: "", md: "flex", lg: "flex" }} whiteSpace={"nowrap"}>
+          <FormControl
+            display={{ base: "", md: "flex", lg: "flex" }}
+            whiteSpace={"nowrap"}
+          >
             <FieldInputController
               height={"40px"}
               paddingLeft="0.5em"
@@ -132,7 +155,11 @@ export const Data = (props: DataProps) => {
           <Text w="7ch" fontWeight={"medium"}>
             Nome
           </Text>
-          <FormControl display={{ base: "", md: "flex", lg: "flex" }} alignItems={"center"} whiteSpace={"nowrap"}>
+          <FormControl
+            display={{ base: "", md: "flex", lg: "flex" }}
+            alignItems={"center"}
+            whiteSpace={"nowrap"}
+          >
             <InputGroup>
               <FieldInputController
                 height={"40px"}
@@ -147,9 +174,15 @@ export const Data = (props: DataProps) => {
                 variant="flushed"
                 isDisabled={!isEditingName}
               />
-              <InputRightElement onClick={() => setIsEditingName(!isEditingName)}>
+              <InputRightElement
+                onClick={() => setIsEditingName(!isEditingName)}
+              >
                 {isEditingName ? (
-                  <HiCheck size={22} cursor={"pointer"} onClick={handleSubmit(onSubmit)} />
+                  <HiCheck
+                    size={22}
+                    cursor={"pointer"}
+                    onClick={handleSubmit(onSubmit)}
+                  />
                 ) : (
                   <HiPencil size={22} cursor={"pointer"} />
                 )}
@@ -161,7 +194,11 @@ export const Data = (props: DataProps) => {
           <Text w="7ch" fontWeight={"medium"}>
             Telefone
           </Text>
-          <FormControl display={{ base: "", md: "flex", lg: "flex" }} alignItems={"center"} whiteSpace={"nowrap"}>
+          <FormControl
+            display={{ base: "", md: "flex", lg: "flex" }}
+            alignItems={"center"}
+            whiteSpace={"nowrap"}
+          >
             <InputGroup>
               <FieldInputController
                 height={"40px"}
@@ -176,9 +213,15 @@ export const Data = (props: DataProps) => {
                 variant="flushed"
                 isDisabled={!isEditingPhone}
               />
-              <InputRightElement onClick={() => setIsEditingPhone(!isEditingPhone)}>
+              <InputRightElement
+                onClick={() => setIsEditingPhone(!isEditingPhone)}
+              >
                 {isEditingPhone ? (
-                  <HiCheck size={22} cursor={"pointer"} onClick={handleSubmit(onSubmit)} />
+                  <HiCheck
+                    size={22}
+                    cursor={"pointer"}
+                    onClick={handleSubmit(onSubmit)}
+                  />
                 ) : (
                   <HiPencil size={22} cursor={"pointer"} />
                 )}
@@ -190,10 +233,18 @@ export const Data = (props: DataProps) => {
           <Text w="7ch" fontWeight={"medium"}>
             Senha
           </Text>
-          <FormControl display={{ base: "", md: "flex", lg: "flex" }} alignItems={"center"} whiteSpace={"nowrap"}>
+          <FormControl
+            display={{ base: "", md: "flex", lg: "flex" }}
+            alignItems={"center"}
+            whiteSpace={"nowrap"}
+          >
             <InputGroup>
               <InputLeftElement>
-                {show ? <AiFillEye onClick={handleClickShow} size={20} /> : <AiFillEyeInvisible onClick={handleClickShow} size={20} />}
+                {show ? (
+                  <AiFillEye onClick={handleClickShow} size={20} />
+                ) : (
+                  <AiFillEyeInvisible onClick={handleClickShow} size={20} />
+                )}
               </InputLeftElement>
               <FieldInputController
                 height={"40px"}
@@ -208,9 +259,15 @@ export const Data = (props: DataProps) => {
                 variant="flushed"
                 isDisabled={!isEditingPassword}
               />
-              <InputRightElement onClick={() => setIsEditingPassword(!isEditingPassword)}>
+              <InputRightElement
+                onClick={() => setIsEditingPassword(!isEditingPassword)}
+              >
                 {isEditingPassword ? (
-                  <HiCheck size={22} cursor={"pointer"} onClick={handleSubmit(onSubmit)} />
+                  <HiCheck
+                    size={22}
+                    cursor={"pointer"}
+                    onClick={handleSubmit(onSubmit)}
+                  />
                 ) : (
                   <HiPencil size={22} cursor={"pointer"} />
                 )}
