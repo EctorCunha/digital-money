@@ -42,7 +42,7 @@ export const RecentActivity = ({ activity, hasPagination, seeActivities }: Recen
         return <ActivityInfo key={activity.id} activity={activity} />;
       })}
 
-      {hasPagination && hasPagination}
+      {hasPagination}
 
       {seeActivities && (
         <Flex
