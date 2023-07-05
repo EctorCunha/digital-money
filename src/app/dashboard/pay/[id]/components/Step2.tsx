@@ -93,8 +93,7 @@ export default function Step2({ data }: Step2Props) {
               name="card"
               key={card.id}
               w="full"
-              control={control}
-            >
+              control={control} rules={undefined}            >
               <Card card={card} />
               {index !== cards.length - 1 && <Divider my="0.5rem" />}
             </RadioGroupController>
