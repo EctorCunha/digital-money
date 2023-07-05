@@ -43,7 +43,7 @@ export const Data = (props: DataProps) => {
       ),
       name: props.firstName + " " + props.lastName,
       phone: props.phone,
-      passwordPlaneholder: "123456",
+      passwordPlaneholder: process.env.NEXT_PUBLIC_SECRET_PASSHOLDER,
     },
   });
 

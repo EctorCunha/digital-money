@@ -5,9 +5,6 @@ import React, { useMemo } from "react";
 import { Link } from "@chakra-ui/next-js";
 import { signOut } from "next-auth/react";
 
-interface SideBarProps {
-  key: string
-}
 
 interface Options {
   label: string;
@@ -15,7 +12,7 @@ interface Options {
   onClick?: () => void;
 }
 
-export const SideBar = ({}: SideBarProps) => {
+export const SideBar = () => {
   const sideBarItems: Options[] = useMemo(() => {
     return [
       {

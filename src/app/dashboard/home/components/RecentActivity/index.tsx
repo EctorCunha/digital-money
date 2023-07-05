@@ -38,7 +38,7 @@ export const RecentActivity = ({ activity, hasPagination, seeActivities }: Recen
 
       <Divider borderBottomColor={"blackAlpha.600"} />
 
-      {activity?.map((activity, index) => {
+      {activity?.map((activity) => {
         return <ActivityInfo key={activity.id} activity={activity} />;
       })}
 
