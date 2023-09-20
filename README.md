@@ -7,6 +7,9 @@
   <p>Esse projeto consiste no desenvolvimento do frontend para o banco Digital Money House como parte do trabalho de conclusão do curso Certified Tech Developer da Digital House. O objetivo principal é criar uma interface amigável e responsiva para os usuários do banco, facilitando a realização de operações bancárias e fornecendo informações relevantes sobre os serviços oferecidos pelo Digital Money House.</p>
   <p>O objetivo do grupo ao realizar este projeto é aplicar os conhecimentos adquiridos ao longo do curso, demonstrando as habilidades individuais e a capacidade de trabalhar em equipe para desenvolver uma solução completa para os clientes.</p>
 
+![image](https://github.com/EctorCunha/digital-money/assets/85139415/c7482863-2c73-493d-a558-abfdd5d9fd42)
+
+
   <h2>Índice</h2>
 
   <ol>
